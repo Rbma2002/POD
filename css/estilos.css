@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"&family=Poppins:wght@200...900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight:300;
+    margin: 0;
+}
+
+nav {
+    color: white;
+    width: 100vw;
+    height: 18.83vh;
+    background-color: #151515;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4%;
+
+}
+
+nav div {
+
+    display: flex;
+    width: 24.11%;
+    justify-content: space-between;
+
+}
+
+nav,
+header, 
+main {
+    width: 100vw;
+    padding: 0 8.33vw;
+
+} 
+
+header {
+    margin-top: 10%;/*para que no baje*/
+    height: 43.30vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin-bottom: 2%;
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+h1.pulse {
+    
+    width: 100%;
+    animation: pulseAnimation 2s infinite;
+}
+  
+  @keyframes pulseAnimation {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+h1,
+header h3,
+nav a,
+header a {
+    line-height: 125%;
+}
+
+nav h1 {
+    font-weight: 500;
+}
+
+header h1 {
+    font-size: 80px;
+    font-family: 'DM Serif Display', serif;
+    color: rgb(50, 50, 50);
+
+}
+
+header h3 {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: rgb(224, 212, 197);
+    letter-spacing: 5px;
+   
+}
+
+header p {
+    font-size: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 0px; 
+}
+
+
+header a,
+nav a {
+    text-transform: capitalize;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+div:hover{
+    border-radius: 50px;
+    background-color: rgb(218, 218, 218);
+   
+}
+
+header a {
+
+    flex-wrap: wrap;
+    font-size: 30px;
+    font-weight: 500;
+    color: grey;
+    border: 3px solid grey;
+    border-radius: 2cm;
+    border-color: grey;
+    padding: 20px;
+
+}
+
+main div {
+    width: 45.83%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+
+}
+
+section { 
+    margin-top: 60%;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex; /*flex encolumna los elementos */
+    justify-content: space-between;
+    flex-wrap: wrap; /* si no entran que no los encolumne */
+    align-content: space-around; /* como se distribuyen los elementos de una linea. Espacio entre filas de elementos con flex, Hay que ponerle un height y tener cuidado */
+    margin-bottom: 50%; /* para el footer de abajo */
+
+}
+
+
+div img {
+
+    width: 100%;
+    /* margin-bottom: 40px; */
+    text-align: center;
+    padding: 3%;
+    border-radius: 50px; 
+    
+ }
+
+
+nav span { display: none;}
+/*oculto en la generalidad el menú hamburguesa*/
+
+.icon-menu::before { 
+    
+    color: white;
+    font-size: 4vw;
+   
+}
+
+span.icon-menu:hover {
+cursor:pointer;
+/* transform: scale(1.5); */
+transform: rotate(90deg) scale(1.2);
+
+}
+
+
+
+@media(max-width: 1024px) {
+  
+    nav div {
+        width: 50%;
+    }
+
+    header, section { 
+        margin-bottom: 20px;
+        height: auto;}
+
+}
+
+
+@media (max-width: 768px) {
+
+    
+    nav div {
+        display: none;
+    }
+
+    /*desaparece el grupo de links*/
+
+    nav span {
+        display: inline;
+    }
+
+    section div {
+    width: 100%;
+    margin-bottom: 2vh;
+
+    }
+
+    /*vuelvo a mostrar el menú hamburguesa*/
+
+}
+
+
+footer{
+    width: auto;
+    height: 205px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    margin-top: 75px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+
+
